@@ -1,0 +1,108 @@
+﻿@section Styles {
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .columns {
+            float: left;
+            width: 100%;
+            padding: 8px;
+        }
+
+        .price {
+            list-style-type: none;
+            border: 1px solid #eee;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+            .price:hover {
+                box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+            }
+
+            .price .header {
+                background-color: #111;
+                color: white;
+                font-size: 25px;
+            }
+
+            .price li {
+                border-bottom: 1px solid #eee;
+                padding: 20px;
+                text-align: center;
+                background-color: gray;
+            }
+    </style>
+
+}
+
+<header class="masthead bg-primary text-white">
+    <div class="container">
+        <h1 class="text-center text-uppercase mb-0">Login</h1>
+        <hr class="star-light">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 col-center-block">
+                <div class="columns">
+                    <ul class="price">
+                        <li class="header text-uppercase" style="background-color:#524fdb">Basic</li>
+                        <li class="bg-secondary">FREE</li>
+                        <li>1 PC/license</li>
+                        <li>Trial lasts for @ViewData["tempoTrial"] days</li>
+                        <li>---</li>
+                        <li style="background-color: #524fdb;"><a href="~/images/portfolio/submarine.png" class="btn btn-xl btn-outline-light" download>Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5  col-sm-12 col-center-block">
+                <div class="columns">
+                        <ul class="price">
+                            <li class="header" style="background-color:#dc4e4d">Pro</li>
+                            <li class="bg-secondary text-uppercase">$ @ViewData["valorProduto"] / month</li>
+                            <li>1 PC/license</li>
+                            <li>No time limit</li>
+                            <li>Update message</li>
+                            <li style="background-color: #dc4e4d;"><a href="@Url.Action("Purchase", "Purchase")" class="btn btn-xl btn-outline-light">Buy</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+@*<form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+        @Html.AntiForgeryToken()
+        <h1 class="text-center text-uppercase mb-0">Login</h1>
+        <hr class="star-light">
+        <div class="row">
+            <div class="col-md-4 col-center-block">
+                <div class="text-center lead" style="font-weight: bold;">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Email" placeholder="E-mail" type="email" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input asp-for="Password" maxlength="100" placeholder="Password" type="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="RememberMe">
+                            <input asp-for="RememberMe" />
+                            <label class="font-weight-light mb-0">Remember Me</label>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-xl btn-outline-light">Login</button>
+        </div>
+    </form>*@
+

@@ -1,0 +1,36 @@
+﻿@model TibiaPixelBot.Models.LoginViewModel
+
+<header class="masthead bg-primary text-white">
+    <div class="container">
+        <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+            @Html.AntiForgeryToken()
+            <h1 class="text-center text-uppercase mb-0">Login</h1>
+            <hr class="star-light">
+            <div class="row">
+                <div class="col-md-4 col-center-block">
+                    <div class="text-center lead" style="font-weight: bold;">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Email" placeholder="E-mail" type="email" class="form-control" />
+                        @*<span asp-validation-for="Email" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Password" maxlength="100" placeholder="Password" type="password" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label asp-for="RememberMe">
+                                <input asp-for="RememberMe" />
+                                <label class="font-weight-light mb-0">Remember Me</label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-xl btn-outline-light">Login</button>
+            </div>
+        </form>
+    </div>
+</header>

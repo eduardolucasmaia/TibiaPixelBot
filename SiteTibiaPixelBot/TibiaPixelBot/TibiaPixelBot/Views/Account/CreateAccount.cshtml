@@ -1,0 +1,65 @@
+﻿@model TibiaPixelBot.Models.CreateAccountViewModel
+
+<header class="masthead bg-primary text-white">
+    <div class="container">
+        <form asp-controller="Account" asp-action="CreateAccount" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+
+            @Html.AntiForgeryToken()
+
+            <h1 class="text-center text-uppercase mb-0">Create Account</h1>
+            <hr class="star-light">
+            <div class="row">
+                <div class="col-md-4 col-center-block">
+                    <div class="text-center lead" style="font-weight: bold;">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Name" maxlength="20" placeholder="Name" type="text" class="form-control" />
+                        @*<span asp-validation-for="Name" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Email" placeholder="E-mail" type="email" class="form-control" />
+                        @*<span asp-validation-for="Email" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Password" maxlength="100" placeholder="Password" type="password" class="form-control" />
+                        @*<span asp-validation-for="Password" class="text-danger"></span>*@
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="ConfirmPassword" maxlength="100" placeholder="Confirm Password" type="password" class="form-control" />
+                        @*<span asp-validation-for="ConfirmPassword" class="text-danger"></span>*@
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" data-toggle="modal" data-target="#modalClausulas" class="btn btn-xl btn-outline-light">Create</button>
+                @*<button type="submit" class="btn btn-xl btn-outline-light">Create</button>*@
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalClausulas" tabindex="-1" role="dialog" aria-labelledby="modalClausulasTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalClausulasTitle" style="color: black !important;">Clauses</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="color: black !important;">
+                            Aqui vai as clausulas.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</header>
+
+
+

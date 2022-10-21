@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TibiaPixelBot", "TibiaPixelBot\TibiaPixelBot.csproj", "{F51F1EB7-2373-4A60-8EB9-62FC53A1C502}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F51F1EB7-2373-4A60-8EB9-62FC53A1C502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51F1EB7-2373-4A60-8EB9-62FC53A1C502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51F1EB7-2373-4A60-8EB9-62FC53A1C502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51F1EB7-2373-4A60-8EB9-62FC53A1C502}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DAC44B4-FDB3-423B-8722-4E2C13D4B5C9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://eduardolucasmaia.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TibiaPixelBot\\TibiaPixelBot.csproj
+		SccProjectName1 = TibiaPixelBot
+		SccLocalPath1 = TibiaPixelBot
+	EndGlobalSection
+EndGlobal

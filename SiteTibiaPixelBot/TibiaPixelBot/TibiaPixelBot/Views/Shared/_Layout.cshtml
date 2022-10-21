@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>@ViewData["Title"]Pixel Bot - Tibia Bot Compatible with BattlEye</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/css/freelancer.css" />
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/css/freelancer.min.css" />
+
+    </environment>
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="~/lib/magnific-popup/dist/css/magnific-popup.css" />
+
+    @RenderSection("Styles", required: false)
+
+    <style>
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+
+            .videoWrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+        .col-center-block {
+            float: none;
+            display: block;
+            margin: 0 auto;
+            /* margin-left: auto; margin-right: auto; */
+        }
+    </style>
+
+
+</head>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="@Url.Action("Index", "Home")#page-top">Pixel Bot</a>
+
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="btn btn-sm btn-outline-light nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="@Url.Action("Index", "Home")#page-top">
+                                @if (User.Identity.Name.IndexOf(" ") != -1)
+                                {
+                                    @User.Identity.Name.Substring(0, User.Identity.Name.IndexOf(' '))
+                                }
+                                else
+                                {
+                                    @User.Identity.Name
+                                }
+                            </a>
+                        </li>
+                    }
+
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="@Url.Action("Index", "Home")#HowUse">How to Use</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="@Url.Action("Index", "Home")#download">Download</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="@Url.Action("Index", "Home")#contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="@Url.Action("Index", "Purchase")">Purchase</a>
+                    </li>
+
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item mx-0 mx-lg-1">
+                            @Html.ActionLink("Create Account", "CreateAccount", "Account", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            @Html.ActionLink("Login", "Login", "Account", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item mx-0 mx-lg-1">
+                            @Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @*@if (ViewData["SuccessMessage"] != null)
+        {
+            <div id="SuccessMessage"></div>
+            @ViewData["SuccessMessage"] = null;
+        }*@
+
+
+
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    @*<h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            2215 John Daniel Drive
+                            <br>Clark, MO 65243
+                        </p>*@
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="https://m.facebook.com/tibiapixelbot">
+                                <i class="fa fa-fw fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" href="#">
+                                <i class="fa fa-fw fa-instagram"></i>
+                            </a>
+                        </li>
+                        @*<li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fa fa-fw fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fa fa-fw fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fa fa-fw fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                    <i class="fa fa-fw fa-dribbble"></i>
+                                </a>
+                            </li>*@
+                    </ul>
+                </div>
+                @*<div class="col-md-4">
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">
+                            Freelance is a free to use, open source Bootstrap theme created by
+                            <a href="http://startbootstrap.com">Start Bootstrap</a>.
+                        </p>
+                    </div>*@
+            </div>
+        </div>
+    </footer>
+    <div class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; Pixel Bot 2018</small>
+        </div>
+    </div>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="~/lib/jquery-easing/dist/jquery.easing.js"></script>
+        <script src="~/lib/magnific-popup/dist/js/jquery.magnific-popup.js"></script>
+        <script src="~/js/jqBootstrapValidation.js"></script>
+        <script src="~/js/contact_me.js"></script>
+        <script src="~/js/freelancer.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/jquery-easing/dist/jquery.easing.min.js"></script>
+        <script src="~/lib/magnific-popup/dist/js/jquery.magnific-popup.min.js"></script>
+        <script src="~/js/jqBootstrapValidation.min.js"></script>
+        <script src="~/js/contact_me.min.js"></script>
+        <script src="~/js/freelancer.min.js"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutoCureBleedingDisabled" xml:space="preserve">
+    <value>Auto Cure Bleeding disabled!</value>
+  </data>
+  <data name="AutoCureBleedingEnabled" xml:space="preserve">
+    <value>Auto Cure Bleeding enabled!</value>
+  </data>
+  <data name="AutoCureBurningDisabled" xml:space="preserve">
+    <value>Auto Cure Burning disabled!</value>
+  </data>
+  <data name="AutoCureBurningEnabled" xml:space="preserve">
+    <value>Auto Cure Burning enabled!</value>
+  </data>
+  <data name="AutoCureCurseDisabled" xml:space="preserve">
+    <value>Auto Cure Curse disabled!</value>
+  </data>
+  <data name="AutoCureCurseEnabled" xml:space="preserve">
+    <value>Auto Cure Curse enabled!</value>
+  </data>
+  <data name="AutoCureElectrificationDisabled" xml:space="preserve">
+    <value>Auto Cure Electrification disabled!</value>
+  </data>
+  <data name="AutoCureElectrificationEnabled" xml:space="preserve">
+    <value>Auto Cure Electrification enabled!</value>
+  </data>
+  <data name="AutoCurePoisonDisabled" xml:space="preserve">
+    <value>Auto Cure Poison disabled!</value>
+  </data>
+  <data name="AutoCurePoisonEnabled" xml:space="preserve">
+    <value>Auto Cure Poison enabled!</value>
+  </data>
+  <data name="AutoFoodDisabled" xml:space="preserve">
+    <value>Auto Eat disabled!</value>
+  </data>
+  <data name="AutoFoodEnabled" xml:space="preserve">
+    <value>Auto Eat enabled!</value>
+  </data>
+  <data name="AutoHasteDisabled" xml:space="preserve">
+    <value>Auto Haste disabled!</value>
+  </data>
+  <data name="AutoHasteEnabled" xml:space="preserve">
+    <value>Auto Haste enabled!</value>
+  </data>
+  <data name="AutoManaShieldDisabled" xml:space="preserve">
+    <value>Auto Mana Shield disabled!</value>
+  </data>
+  <data name="AutoManaShieldEnabled" xml:space="preserve">
+    <value>Auto Mana Shield enabled!</value>
+  </data>
+  <data name="AutoParalizeDisabled" xml:space="preserve">
+    <value>Auto Remove Paralize disabled!</value>
+  </data>
+  <data name="AutoParalizeEnabled" xml:space="preserve">
+    <value>Auto Remove Paralize enabled!</value>
+  </data>
+  <data name="CantExport" xml:space="preserve">
+    <value>Error: Can not export configuration...</value>
+  </data>
+  <data name="CaptureImage" xml:space="preserve">
+    <value>Capture the image on the main monitor or try another one.</value>
+  </data>
+  <data name="CleanedLogs" xml:space="preserve">
+    <value>Cleaned Logs!</value>
+  </data>
+  <data name="ErroReadFile" xml:space="preserve">
+    <value>Error: Can not read file...</value>
+  </data>
+  <data name="ErrorLoadingResources" xml:space="preserve">
+    <value>Error on Loading Resources.</value>
+  </data>
+  <data name="FormSettingsName" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="FormStop" xml:space="preserve">
+    <value>PIXEL - STOP!</value>
+  </data>
+  <data name="FormWorking" xml:space="preserve">
+    <value>PIXEL - WORKING!</value>
+  </data>
+  <data name="ImportSucces" xml:space="preserve">
+    <value>Importing successfully!</value>
+  </data>
+  <data name="LocationNegativeNum" xml:space="preserve">
+    <value>Location is with negative numbers.</value>
+  </data>
+  <data name="NotCapturing" xml:space="preserve">
+    <value>Not Capturing position...</value>
+  </data>
+  <data name="OpenTPB" xml:space="preserve">
+    <value>Open Tibia Pixel Bot file</value>
+  </data>
+  <data name="PositionSaved" xml:space="preserve">
+    <value>Position saved successfully!</value>
+  </data>
+  <data name="SavedSucces" xml:space="preserve">
+    <value>Saved successfully!</value>
+  </data>
+  <data name="Spell" xml:space="preserve">
+    <value>SPELL:</value>
+  </data>
+  <data name="StopAll" xml:space="preserve">
+    <value>Stoped all!</value>
+  </data>
+  <data name="TibiaNotOpen" xml:space="preserve">
+    <value>Tibia is not open.</value>
+  </data>
+  <data name="TPBFiles" xml:space="preserve">
+    <value>Arquivos do Tibia Pixel Bot</value>
+  </data>
+  <data name="ValueIncorrectly" xml:space="preserve">
+    <value>Some value entered incorrectly or out of standards!</value>
+  </data>
+  <data name="VerificationAdded" xml:space="preserve">
+    <value>Verification added!</value>
+  </data>
+  <data name="VerificationAltered" xml:space="preserve">
+    <value>Verification altered!</value>
+  </data>
+  <data name="VerificationExcluded" xml:space="preserve">
+    <value>Verification excluded!</value>
+  </data>
+  <data name="WaitingCapture" xml:space="preserve">
+    <value>Waiting to capture!</value>
+  </data>
+  <data name="MotivoSeguranca" xml:space="preserve">
+    <value>For safety reasons the function was stopped by continuous repetitions!</value>
+  </data>
+  <data name="StartingAutoAction" xml:space="preserve">
+    <value>Starting auto actions...</value>
+  </data>
+  <data name="SaveTPB" xml:space="preserve">
+    <value>Save Tibia Pixel Bot file</value>
+  </data>
+  <data name="AutoScanCould" xml:space="preserve">
+    <value>Auto scan could not be used!</value>
+  </data>
+  <data name="Problems" xml:space="preserve">
+    <value>Problems</value>
+  </data>
+  <data name="AutoScanDisabled" xml:space="preserve">
+    <value>Auto scan disabled!</value>
+  </data>
+  <data name="AutoScanEnabled" xml:space="preserve">
+    <value>Auto scan enabled!</value>
+  </data>
+  <data name="VerificationStopped" xml:space="preserve">
+    <value>Verification stopped!</value>
+  </data>
+</root>

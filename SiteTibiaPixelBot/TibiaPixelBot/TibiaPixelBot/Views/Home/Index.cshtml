@@ -1,0 +1,299 @@
+﻿@model TibiaPixelBot.Models.UsuarioViewModel
+<!-- Header -->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container">
+        <img class="img-fluid d-block mx-auto" src="~/images/profile.png" alt="">
+        <h1 class="text-uppercase mb-0">Pixel Bot</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">Tibia Bot - Compatible with BattlEye</h2>
+    </div>
+</header>
+<!-- Portfolio Grid Section -->
+<section class="portfolio" id="HowUse">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">How to Use</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                    <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="~/images/portfolio/cabin.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+                    <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="~/images/portfolio/cake.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                    <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="~/images/portfolio/circus.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+                    <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="~/images/portfolio/game.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+                    <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="~/images/portfolio/safe.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+                    <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="~/images/portfolio/submarine.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section -->
+<section class="bg-primary text-white mb-0" id="download">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-white">Download</h2>
+        <hr class="star-light mb-5">
+        <div class="text-center mt-4">
+            <p class="lead" style="font-weight: bold;">Get @ViewData["tempoTrial"] Days Free Trial!</p>
+            <p class="lead">Requirements:</p>
+            <p><a target="_blank" href="https://www.microsoft.com/pt-br/download/details.aspx?id=30653" style="color:white">Install Microsoft .NET Framework 4.5</a></p>
+            <p>Create Account</p>
+            <p>Log Into Pixel Bot Application</p>
+        </div>
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="~/images/portfolio/submarine.png" download>
+                <i class="fa fa-download mr-2"></i>
+                Download Now!
+                <br />
+                <small>For All Client Version!</small>
+            </a>
+            <p>Pixel Bot 1.0.0 Windows</p>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form asp-controller="Home" asp-action="Index" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" novalidate="novalidate">
+                    @Html.AntiForgeryToken()
+
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Name</label>
+                            <input asp-for="Name" placeholder="Name" required="required" type="text" class="form-control" data-validation-required-message="Please enter your name." />
+                            @*<span asp-validation-for="Name" class="help-block text-danger"></span>*@
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Email Address</label>
+                            <input asp-for="Email" type="email" placeholder="Email Address" required="required" class="form-control" data-validation-required-message="Please enter your email address.">
+                            @*<span asp-validation-for="Email" class="help-block text-danger"></span>*@
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Message</label>
+                            <textarea asp-for="Message" class="form-control" irows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                            @*<span asp-validation-for="Message" class="help-block text-danger"></span>*@
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Modals -->
+<!-- Portfolio Modal 1 -->
+<div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+    <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+                    <hr class="star-dark mb-5">
+                    @* <img class="img-fluid mb-5" src="~/images/portfolio/cabin.png" alt="">*@
+                    <div class="img-fluid mb-5">
+                        <div class="videoWrapper">
+                            <iframe width="560" height="349" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                        <i class="fa fa-close"></i>
+                        Close Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 2 -->
+<div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+    <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+                    <hr class="star-dark mb-5">
+                    <img class="img-fluid mb-5" src="~/images/portfolio/cake.png" alt="">
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                        <i class="fa fa-close"></i>
+                        Close Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 3 -->
+<div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+    <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+                    <hr class="star-dark mb-5">
+                    <img class="img-fluid mb-5" src="~/images/portfolio/circus.png" alt="">
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                        <i class="fa fa-close"></i>
+                        Close Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 4 -->
+<div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+    <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+                    <hr class="star-dark mb-5">
+                    <img class="img-fluid mb-5" src="~/images/portfolio/game.png" alt="">
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                        <i class="fa fa-close"></i>
+                        Close Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 5 -->
+<div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+    <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+                    <hr class="star-dark mb-5">
+                    <img class="img-fluid mb-5" src="~/images/portfolio/safe.png" alt="">
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                        <i class="fa fa-close"></i>
+                        Close Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 6 -->
+<div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+    <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+                    <hr class="star-dark mb-5">
+                    <img class="img-fluid mb-5" src="~/images/portfolio/submarine.png" alt="">
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                        <i class="fa fa-close"></i>
+                        Close Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+    window.onload = function () {
+        var div = '@ViewData["divFocus"]';
+        if (div != null && div != '') {
+            document.getElementById(div).scrollIntoView();
+        }
+    };
+    </script>
+}
+

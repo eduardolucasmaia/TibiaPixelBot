@@ -1,0 +1,4 @@
+Scaffold-DbContext "Data Source=localhost\SQLEXPRESS;Initial Catalog=TibiaDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir DataModels -force
+
+
+optionsBuilder.UseSqlServer(Startup.ConnectionString);
